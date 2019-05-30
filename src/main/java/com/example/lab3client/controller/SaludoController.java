@@ -5,13 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LuckyWordController {
+public class SaludoController {
 
-    @Value("${lucky-word}")
-    String luckyWord;
+    @Value("${nombre}")
+    String nombre;
 
-    @GetMapping("/lucky-word")
-    public String showLuckyWord() {
-        return "The lucky word is: " + luckyWord;
+    @GetMapping("/")
+    public String mostrarSaludo() {
+        return "Hola " + nombre;
     }
 }
